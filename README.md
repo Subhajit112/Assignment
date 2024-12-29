@@ -73,7 +73,7 @@ Visit `http://localhost:9090` to access the Prometheus dashboard.
 ## Architecture
 
 - Static page served by Nginx
-- Kubernetes deployment with 3 replicas
+- Kubernetes deployment with 2 replicas
 - LoadBalancer service for external access
 - Prometheus monitoring
 - AWS EKS cluster managed by Terraform
