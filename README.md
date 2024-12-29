@@ -29,8 +29,8 @@ aws eks update-kubeconfig --region <REGION> --name <CLUSTER_NAME>
 docker build -t web-app .
 
 # Tag and push to your container registry
-docker tag web-app:latest your-registry/web-app:latest
-docker push your-registry/web-app:latest
+docker tag web-app:latest <dockerhub>registry/web-app:latest
+docker push <dockerhub>/web-app:latest
 ```
 
 3. **Deploy to Kubernetes**
