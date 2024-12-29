@@ -19,6 +19,7 @@ This project demonstrates a cloud-native web application deployed on Kubernetes 
 cd terraform
 terraform init
 terraform apply
+aws eks update-kubeconfig --region <REGION> --name <CLUSTER_NAME>
 ```
 
 2. **Build and Push Docker Image**
@@ -48,7 +49,7 @@ kubectl apply -f k8s/service.yaml
 ```bash
 # Deploy Prometheus
 kubectl create namespace monitoring
-kubectl apply -f k8s/prometheus/prometheus-config.yaml
+kubectl apply -f k8s/prometheus-config.yaml
 ```
 
 ## Accessing the Application
