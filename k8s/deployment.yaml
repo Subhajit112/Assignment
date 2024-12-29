@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: static-web
-        image: static-web:latest
+        image: <registry>/web-app:latest
         ports:
         - containerPort: 80
