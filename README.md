@@ -8,7 +8,7 @@ This project demonstrates a cloud-native web application deployed on Kubernetes 
 - Kubernetes cluster (EKS)
 - kubectl
 - Terraform
-- AWS CLI (configured with appropriate credentials)
+- AWS CLI
 
 ## Deployment Steps
 
@@ -37,7 +37,7 @@ docker push your-registry/web-app:latest
 
 ```bash
 # Update kubeconfig for EKS cluster
-aws eks update-kubeconfig --region us-west-2 --name demo-cluster
+aws eks update-kubeconfig --region <Region> --name <cluster name>
 
 # Deploy the application
 kubectl apply -f k8s/deployment.yaml
@@ -72,7 +72,7 @@ Visit `http://localhost:9090` to access the Prometheus dashboard.
 
 ## Architecture
 
-- React frontend served by Nginx
+- Static page served by Nginx
 - Kubernetes deployment with 3 replicas
 - LoadBalancer service for external access
 - Prometheus monitoring
